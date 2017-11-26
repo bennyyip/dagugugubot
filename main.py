@@ -92,12 +92,12 @@ def parse_raw(raw_html):
     status = status.strip().replace('\u200b', '').replace('\xa0', ' ')
 
     ret = []
-    if len(status) > 150:
-        num_tweet = len(status) // 140 + 1
+    if len(status) > 68:
+        num_tweet = len(status) // 68 + 1
         i = 1
-        while len(status) > 140:
-            ret.append("(%d/%d) %s" % (i, num_tweet, status[:140]))
-            status = status[140:]
+        while len(status) > 68:
+            ret.append("(%d/%d) %s" % (i, num_tweet, status[:68]))
+            status = status[68:]
             i += 1
         ret.append("(%d/%d) %s" % (i, num_tweet, status))
     else:
