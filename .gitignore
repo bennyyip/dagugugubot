@@ -1,0 +1,6 @@
+venv/*
+__pycache__/*
+weibo_account.json
+cookie
+*.log
+sent.json
